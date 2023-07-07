@@ -2,20 +2,26 @@
   "name": "test_etl_pipeline",
   "version": "0.1.0",
   "bin": {
-    "test_etl_pipeline": "bin/test_etl_pipeline.js"
+    "test_etl_pipeline": "lib/app.js"
   },
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
+    "cdk": "cdk",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --fix --ext .ts",
     "test": "jest",
-    "cdk": "cdk"
+    "watch": "tsc -w"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "@types/node": "20.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "aws-cdk": "2.86.0",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "jest": "^29.5.0",
     "ts-jest": "^29.1.0",
-    "aws-cdk": "2.86.0",
     "ts-node": "^10.9.1",
     "typescript": "~5.1.3"
   },
